@@ -23,3 +23,17 @@ function removeItem(e){
         }
     }
 }
+// Filter Items
+function filterItems(e){
+    var text = e.target.value.toLowerCase();
+    var items = itemList.getElementsByTagName('li');
+    Array.form(items).forEach(function(item)){
+        var itemName = item.firstChild.textContent;
+        if(itemName.toLowerCase().indexof(text) != -1){
+            item.style.display = 'block';
+        }else{
+            item.style.display = 'none';
+        }
+    }
+
+}
