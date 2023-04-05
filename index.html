@@ -1,19 +1,47 @@
-<titile>Objects in Local Storage - JavaScript - dcode</titile>
-<link rel="stylesheet" href="http://youtube.local/assets/decode.css">
-<link rel="shortcut icon" href="http://youtube.local/assets/favicon.ico">
-<style media="screen" >
-</style>
-<body>
-  <h2 id="titile">Objects in Local Storage - JavaScript - dcode</h2>
-</body>
-<script type="text/javascript">
-  let myObj = {
-    name:"madhu",
-    age : 21
+<html>
+  <head>
+   
+    </head>
+    <style>
+      form{
+        background-color: blueviolet;
+        text-align: center;
+      }
+      input{
+        font-size: 30px;
+        color: aqua;
+        width: 1000px;
+      }
+    </style>
+   
+  </head>
+  <body>
+    <form action="#" onsubmit="onsignup(event)">
+      <label>Name</label>
+      <br/>
+      <input type="text" name="username" required>
+      <br/>
+      <label>Email</label>
+      <br/>
+      <input type="text" name="email" required>
+      <br/>
+      <label>Password</label>
+      <br/>
+      <input type="password" name="password" required>
+      <br/>
+      <button> Sign Up</button>
+    
 
-  };
-  let myObj_serialized = JSON.stringify(myObj);
-  localStorage.setItem("myObj",myObj_serialized);
-  let myObj_deserialized = JSON.parse(localStorage.getItem("myObj"));
-  console.log(myObj_deserialized);
-</script>
+    </form>
+    <form>
+      <input/>
+    </form>
+    <script>
+      function onsignup(event){
+        event.preventDefault();
+        console.log(event.target.username.value)
+      }
+    </script>
+
+  </body>
+</html>
